@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import CartReducer from '../features/layout/Cart/CartModalSlice';
+import SearchReducer from '../features/layout/MobileSearch/SearchSlice';
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+	reducer: {
+		cart: CartReducer,
+		search: SearchReducer,
+	},
 });

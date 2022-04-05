@@ -7,6 +7,7 @@ import FavouriteIcon from '../../../assets/icons/favourite-white.svg';
 
 import PeopleIcon from '../../../assets/icons/people-white.svg';
 import RatingsComponent from '../BookCard/RatingsComponent';
+import { useSelector } from 'react-redux';
 
 function CarouselElement({ books }) {
 	const breakPoints = [
@@ -40,7 +41,12 @@ function CarouselElement({ books }) {
 			</div>
 		);
 	}
+	const cartItems = useSelector((state) => state.cart.data);
 
+	const findNumberOfItems = (id) => {
+		const items = cartItems.filter((item) => item.id === id);
+		return items.length;
+	};
 	return (
 		<div
 			style={{
@@ -89,14 +95,26 @@ function CarouselElement({ books }) {
 							/>
 							<div className={styles.imageDescription}>
 								<div className={styles.imageDescriptionContainer}>
-									<div
-										style={{
-											marginBottom: 18,
-											color: '#65C100',
-										}}
-									>
-										Available
-									</div>
+									{book.available_copies - findNumberOfItems(book.id) > 0 ? (
+										<div
+											style={{
+												marginBottom: 18,
+												color: '#65C100',
+											}}
+										>
+											Available
+										</div>
+									) : (
+										<div
+											style={{
+												marginBottom: 18,
+												color: '#C12300',
+											}}
+										>
+											Out of stock
+										</div>
+									)}
+
 									<div
 										style={{
 											fontWeight: '700',
@@ -112,6 +130,7 @@ function CarouselElement({ books }) {
 										}}
 									>
 										{book.authors?.map((author) => author.name)?.join(', ')}
+										<br />
 										{book.release_date && new Date(book.release_date).getFullYear()}
 									</div>
 									<div

@@ -8,7 +8,8 @@ import CartNavbar from './CartNavbar';
 
 function Cart() {
 	const dispatch = useDispatch();
-	const cartModalState = useSelector((state) => state.cart.open);
+	const cartModalState = useSelector((state) => state.cartModal.open);
+
 	return (
 		<Modal open={cartModalState} onClose={() => dispatch(closeCartModal())}>
 			<div className={styles.cartContainer} onClick={(e) => e.stopPropagation()}>

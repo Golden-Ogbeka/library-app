@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const CartModalSlice = createSlice({
-	name: 'cart',
+	name: 'cartModal',
 	initialState: {
 		open: false,
 	},

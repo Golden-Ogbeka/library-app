@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const SearchSlice = createSlice({
-	name: 'search',
+export const SearchModalSlice = createSlice({
+	name: 'searchModal',
 	initialState: {
 		open: false,
 	},
@@ -15,6 +15,6 @@ export const SearchSlice = createSlice({
 	},
 });
 
-export const { closeSearchModal, openSearchModal } = SearchSlice.actions;
+export const { closeSearchModal, openSearchModal } = SearchModalSlice.actions;
 
-export default SearchSlice.reducer;
+export default SearchModalSlice.reducer;

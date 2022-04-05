@@ -1,0 +1,16 @@
+.container {
+	padding-top: 27px;
+}
+
+.paddedContainer {
+	padding-inline: 40px;
+}
+
+@media (max-width: 800px) {
+	.paddedContainer {
+		padding-inline: 30px;
+	}
+	.container {
+		padding-top: 20px;
+	}
+}

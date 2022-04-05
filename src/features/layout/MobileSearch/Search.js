@@ -1,14 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../ModalComponent/Modal';
-import { closeSearchModal } from './SearchSlice';
+import { closeSearchModal } from './SearchModalSlice';
 import styles from './styles.module.css';
 import ArrowBackIcon from '../../../assets/icons/arrow-back.svg';
 import SearchIcon from '../../../assets/icons/search.svg';
 
 function Search({ onClose = () => null, ...props }) {
 	const dispatch = useDispatch();
-	const searchModalState = useSelector((state) => state.search.open);
+	const searchModalState = useSelector((state) => state.searchModal.open);
 	return (
 		<Modal open={searchModalState} onClose={() => dispatch(closeSearchModal())}>
 			<div className={styles.navbar} onClick={(e) => e.stopPropagation()}>

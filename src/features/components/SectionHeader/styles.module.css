@@ -1,0 +1,17 @@
+.container {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+	padding-bottom: 14px;
+	width: 100%;
+	border-bottom: 1px solid #eeeeee;
+}
+
+@media (max-width: 800px) {
+	.hiddenInMobile {
+		display: none;
+	}
+}

@@ -1,0 +1,11 @@
+.container {
+	padding-top: 27px;
+	padding-inline: 40px;
+}
+
+@media (max-width: 800px) {
+	.container {
+		padding-top: 20px;
+		padding-inline: 30px;
+	}
+}

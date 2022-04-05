@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-function AppLayout() {
+function AppLayout({ children }) {
 	return (
-		<div>
+		<>
 			<Navbar />
-		</div>
+			<main>{children}</main>
+		</>
 	);
 }
 

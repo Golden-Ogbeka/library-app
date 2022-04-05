@@ -1,6 +1,6 @@
 # Library App
 
-A basic implementation of a book purchase system with cart features
+A basic implementation of a book purchase system with cart and search features
 
 ## Major Tools Used
 

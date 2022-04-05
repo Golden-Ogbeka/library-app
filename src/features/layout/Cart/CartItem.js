@@ -94,6 +94,7 @@ function CartItem({ book }) {
 								border: '1px solid #DDDDDD',
 								backgroundColor: '#F9F9FB',
 							}}
+							disabled={findNumberOfItems() <= 1}
 							onClick={() => dispatch(removeFromCart(book))}
 						>
 							-

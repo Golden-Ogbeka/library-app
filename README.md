@@ -8,7 +8,7 @@ React JS, Redux Toolkit and React Elastic Carousel
 
 ## Demo
 
-https://library-app-sage.vercel.app/
+[https://library-app-sage.vercel.app/](https://library-app-sage.vercel.app/)
 
 ## Documentation
 
@@ -18,5 +18,6 @@ https://library-app-sage.vercel.app/
 - You can search for a book from the static books returned
 
 ## Installation instructions
+
 - Run npm install
 - Run npm start
